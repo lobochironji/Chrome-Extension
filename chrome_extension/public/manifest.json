@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Flamingo",
+    "version": "1.0.0",
+    "description": "A simple chrome extension for summarizing pages",
+    "author": "XYZ",
+    "permissions": [
+        "activeTab","scripting","sidePanel"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Flamingo"
+    } ,
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "128": "icon128.png"
+    },
+    "side_panel":{
+        "default_path": "index.html"
+    }
+}
